@@ -13,7 +13,7 @@ function q=recomp(x, p, M, sz)
 %  p = M*repmat(x',m,1).^p;
 
 if nargin < 2, error('2 inputs required.'); end
-if nargin < 4, sz = [size(M,1) 1]; end
+if nargin == 3, sz = [size(M,1) 1]; end
 
 [free,xn] = isfree(x);
 if ~free
